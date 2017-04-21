@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JSCalculator:jar">
+    <output-path>$PROJECT_DIR$/../../JSCalc Jar</output-path>
+    <root id="archive" name="JSCalculator.jar">
+      <element id="module-output" name="JSCalculator" />
+    </root>
+  </artifact>
+</component>
