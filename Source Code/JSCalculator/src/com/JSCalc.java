@@ -97,6 +97,7 @@ public class JSCalc {
         edits_results.setRightComponent(jstexteditor_scrollpane);
 
         textPane = new JTextArea();
+        textPane.setLineWrap(true);
         textPane.setTabSize(2);
         textPane.setFont(textFont);
         textPane.setBackground(keyColorbg);
@@ -111,6 +112,7 @@ public class JSCalc {
         jstexteditor_scrollpane.setViewportView(textPane);
 
         resultsPane = new JTextArea();
+        resultsPane.setLineWrap(true);
         resultsPane.setEditable(false);
         resultsPane.setForeground(Color.WHITE);
         resultsPane.setFont(textFont);
