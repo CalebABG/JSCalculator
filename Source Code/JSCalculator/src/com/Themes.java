@@ -14,7 +14,7 @@ public class Themes {
     public static void vegasGold(){setTheme(ColorConverter.HEXtoRGB("#594500"), Color.white);}
     public static void roseWood(){setTheme(ColorConverter.HEXtoRGB("#5A0001"), Color.white);}
     public static void antiquePink(){setTheme(ColorConverter.HEXtoRGB("#962D35"), Color.white);}
-    public static void nightViolet(){setTheme(ColorConverter.HEXtoRGB("#100622"), Color.white);}
+    public static void nightViolet(){setTheme(ColorConverter.HEXtoRGB("#1A0F30"), Color.white);}
 
     public static void setTheme(Color keyColorbg, Color keyColorfg) {
         UIManager.put("SplitPane.background", keyColorbg.darker());
