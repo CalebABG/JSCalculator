@@ -17,8 +17,8 @@ The JSCalculator is a unique and beautiful, flat designed and powerful calculato
 * Vegas Gold
 * RoseWood
 * Antique Pink
+* Night Violet
 
 ---
 
 ## Functions
-
