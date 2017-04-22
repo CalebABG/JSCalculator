@@ -26,17 +26,9 @@ public class Themes {
         edits_results.setBorder(BorderFactory.createLineBorder(keyColorbg, 1));
         results_scrollpane.setBorder(BorderFactory.createLineBorder(keyColorbg, 1));
         jstexteditor_scrollpane.setBorder(BorderFactory.createLineBorder(keyColorbg, 1));
-        for (int i = 0; i < buttons.length; i++) {
-            buttons[i].setBackground(keyColorbg);
-            buttons[i].setForeground(keyColorfg);
-            int finalI = i;
-            buttons[i].addMouseListener(new MAdapter(e -> {
-                buttons[finalI].setBackground(keyColorbg.darker().darker());
-                buttons[finalI].setForeground(keyColorfg);
-            }, e -> {
-                buttons[finalI].setBackground(keyColorbg);
-                buttons[finalI].setForeground(keyColorfg);
-            }));
+        for (CLabel button : buttons) {
+            button.setBackground(keyColorbg);
+            button.setForeground(keyColorfg);
         }
         menuBar.bgColor = keyColorbg;
         for (int i = 0; i < menuBar.menus.size(); i++) {

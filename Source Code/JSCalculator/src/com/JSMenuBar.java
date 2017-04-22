@@ -22,6 +22,16 @@ public class JSMenuBar extends JMenuBar {
         menus.add(file);
         add(Box.createHorizontalStrut(8));
 
+        JMenuItem reset = new JMenuItem("Clear Calculator");
+        reset.addActionListener(e -> {
+            String msg = "Clear calculator data? This will delete all user saved variables and functions";
+            String[] options = {"Yes Clear", "No, cancel!"};
+            int n = JOptionPane.showOptionDialog(JSCalc.frame, msg, reset.getText(), JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+            if (n == JOptionPane.YES_OPTION) JSCalc.reset();
+        });
+        file.add(reset);
+        menuItems.add(reset);
+
         //Exit
         JMenuItem exit = new JMenuItem("Exit");
         exit.addActionListener(e -> System.exit(0));

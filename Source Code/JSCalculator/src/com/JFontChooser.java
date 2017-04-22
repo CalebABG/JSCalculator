@@ -262,7 +262,7 @@ public class JFontChooser extends JComponent {
      * @see #setSelectedFontSize
      **/
     public int getSelectedFontSize() {
-        int fontSize = 1;
+        int fontSize;
         String fontSizeString = getFontSizeTextField().getText();
         while (true) {
             try {
@@ -382,7 +382,6 @@ public class JFontChooser extends JComponent {
 
         dialog.setVisible(true);
         dialog.dispose();
-        dialog = null;
 
         return dialogResultValue;
     }
