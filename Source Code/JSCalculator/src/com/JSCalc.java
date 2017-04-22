@@ -46,7 +46,7 @@ public class JSCalc {
      * Launch the application.
      */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new JSCalc());
+        SwingUtilities.invokeLater(JSCalc::new);
     }
 
     /**
@@ -112,6 +112,7 @@ public class JSCalc {
         jstexteditor_scrollpane.setViewportView(textPane);
 
         resultsPane = new JTextArea();
+        resultsPane.setTabSize(2);
         resultsPane.setLineWrap(true);
         resultsPane.setEditable(false);
         resultsPane.setForeground(Color.WHITE);
@@ -154,6 +155,7 @@ public class JSCalc {
 
         //x^3
         buttons[1] = new CLabel("<html>x<sup>3</sup></html>", font1, keyColorfg, keyColorbg);
+        //buttons[1].getMouseListeners()[0].mouseClicked();
         buttons[1].addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 JSOperations.x_cubed();
@@ -585,24 +587,31 @@ public class JSCalc {
         gbc_equals.gridy = 4;
         panel.add(buttons[29], gbc_equals);
 
-        for (int i = 0; i < buttons.length; i++) {
-            int finalI = i;
-            buttons[i].addMouseListener(new MAdapter(e -> {
-                buttons[finalI].setBackground(buttons[finalI].getBackground().darker().darker());
-                buttons[finalI].setForeground(Color.white);
+        for (CLabel button : buttons) {
+            button.addMouseListener(new MAdapter(e -> {
+                button.pressed_bgcolor = button.getBackground().darker().darker();
+                button.pressed_fgcolor = button.getForeground();
+                button.released_bgcolor = button.getBackground();
+                button.released_fgcolor = button.getForeground();
+
+                button.setBackground(button.pressed_bgcolor);
+                button.setForeground(button.pressed_fgcolor);
             }, e -> {
-                buttons[finalI].setBackground(keyColorbg);
-                buttons[finalI].setForeground(Color.WHITE);
+                button.setBackground(button.released_bgcolor);
+                button.setForeground(button.released_fgcolor);
             }));
         }
 
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowOpened(WindowEvent e) {
-                textPane.requestFocus();
-                e.getWindow().removeWindowListener(this);
-            }
-        });
+        frame.addWindowListener(new WAdapter.WindowOpened(e -> textPane.requestFocus()));
         frame.setVisible(true);
+    }
+
+    public static void reset(){
+        try {
+            scriptEngine = new ScriptEngineManager().getEngineByName("Nashorn");
+            scriptEngine.put("π", Math.PI); // Have to add here, will not put from mfunctions file
+            scriptEngine.eval(new InputStreamReader(JSCalc.class.getClass().getResourceAsStream("/mfunctions.js")));
+        } catch (Exception e) {e.printStackTrace();}
     }
 
     private void shortcut_switch(String state) {
