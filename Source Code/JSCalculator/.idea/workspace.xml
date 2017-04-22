@@ -18,17 +18,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JSCalc.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSCalc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/JSCalc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10395">
-              <caret line="610" column="80" lean-forward="false" selection-start-line="610" selection-start-column="80" selection-end-line="610" selection-end-column="80" />
-              <folding />
+            <state relative-caret-position="10647">
+              <caret line="610" column="77" lean-forward="false" selection-start-line="610" selection-start-column="77" selection-end-line="610" selection-end-column="77" />
+              <folding>
+                <element signature="e#2161#2162#0" expanded="true" />
+                <element signature="e#2189#2190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSMenuBar.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JSMenuBar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/JSMenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
@@ -110,8 +113,8 @@
         <option value="$PROJECT_DIR$/src/com/WAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/Themes.java" />
         <option value="$PROJECT_DIR$/src/com/JFontChooser.java" />
-        <option value="$PROJECT_DIR$/src/com/JSCalc.java" />
         <option value="$PROJECT_DIR$/src/com/JSMenuBar.java" />
+        <option value="$PROJECT_DIR$/src/com/JSCalc.java" />
       </list>
     </option>
   </component>
@@ -608,7 +611,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -906,6 +909,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/JSCalc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10647">
+          <caret line="610" column="77" lean-forward="false" selection-start-line="610" selection-start-column="77" selection-end-line="610" selection-end-column="77" />
+          <folding>
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Themes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -920,14 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/JSCalc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10395">
-          <caret line="610" column="80" lean-forward="false" selection-start-line="610" selection-start-column="80" selection-end-line="610" selection-end-column="80" />
           <folding />
         </state>
       </provider>
