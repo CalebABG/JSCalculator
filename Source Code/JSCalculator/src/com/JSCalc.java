@@ -24,7 +24,7 @@ public class JSCalc {
     public static Color keyColorbg = new Color(20, 23, 25).brighter();
     public static Color keyColorfg = Color.WHITE;
     public static Robot robot;
-    public static String for_state = "for(var i = 0, j=\"\"; i < 5; i++){\n" + "    \n" + "}";
+    public static String for_state = "for(var i = 0; i < 5; i++){\n" + "    \n" + "}";
     public static String if_state = "if(){\n" + "    \n" + "}";
     public static String while_state = "while(){\n" + "    \n" + "}";
     public static String switch_state = "switch() {\n" +
@@ -615,7 +615,7 @@ public class JSCalc {
     }
 
     private void shortcut_switch(String state) {
-        if (state != null && !state.isEmpty()) {
+        if (state != null && !state.isEmpty()){
             switch (state) {
                 case "for":
                     textPane.replaceSelection(for_state);
