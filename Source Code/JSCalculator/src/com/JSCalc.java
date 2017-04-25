@@ -65,7 +65,7 @@ public class JSCalc {
         UIManager.put("SplitPaneDivider.border", BorderFactory.createLineBorder(keyColorbg, 1));
         frame = new JFrame("JSCalc <(^.^)> -- Shift+Enter to Calculate");
         frame.setSize(430, 570);
-        frame.setIconImage(Toolkit.getDefaultToolkit().getImage(JSCalc.class.getResource("/enginelogo.png")));
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage(JSCalc.class.getResource("/logo.png")));
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
