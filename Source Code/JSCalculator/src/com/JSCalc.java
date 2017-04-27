@@ -35,6 +35,8 @@ public class JSCalc {
                                         "}";
 
     static {
+        System.setProperty("apple.laf.useScreenMenuBar", "true");
+        System.setProperty("com.apple.macos.use-file-dialog-packages", "true");
         try {
             robot = new Robot();
             scriptEngine.put("π", Math.PI); // Have to add here, will not put from mfunctions file
