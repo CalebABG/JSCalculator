@@ -14,4 +14,14 @@ public class MAdapter extends MouseAdapter {
 
     public void mousePressed(MouseEvent e) {pressed_function.accept(e);}
     public void mouseReleased(MouseEvent e) {release_function.accept(e);}
+
+    public static class MouseClicked implements MouseAdapterX {
+        public Consumer<MouseEvent> clicked_function;
+
+        public MouseClicked(Consumer<MouseEvent> clicked_function) {
+            this.clicked_function = clicked_function;
+        }
+
+        public void mouseClicked(MouseEvent e) {clicked_function.accept(e);}
+    }
 }
